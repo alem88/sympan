@@ -58,22 +58,6 @@ class S3Handler:
 
             logger.error(f'Downloading file failed: {e}')
 
-    def delete_bucket(self, bucket_name):
-        bucket = self.s3.Bucket(bucket_name)
-        for object in bucket.objects.all():
-            try:
-                logger.info(f'Deleting an object {object.key} from the bucket {bucket_name}')
-                self.s3.Object(bucket_name, object.key).delete()
-                logger.info(f'Deleting an object finished.')
-            except Exception as e:
-                logger.error(f'Error occured during deleting an object: {e}')
-        try:
-            logger.info(f'Deleting bucket {bucket_name}')
-            bucket.delete()
-            logger.info(f'Bucket {bucket_name} is deleted.')
-        except Exception as e:
-            logger.error(f'Deleting bucket {bucket_name} failed with exception: {e}')
-
     def get_all_keys(self, bucket_name):
         bucket = self.s3.Bucket(bucket_name)
         for object in bucket.objects.all():
