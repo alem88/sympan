@@ -1,0 +1,7 @@
+data/
+credentials.py
+build/
+dist/
+__pycache__/
+sympan.egg-info/
+config.py
