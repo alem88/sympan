@@ -1,4 +1,4 @@
-## sympan - Python library for downloading anything from S3
+## sympan - Python library for downloading data from S3
 
 This is a simple Python library for downloading any content from S3, locally.
 It is based on boto3 and joblib. It is really a simple library,
