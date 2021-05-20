@@ -5,7 +5,7 @@ HERE = pathlib.Path(__file__).parent
 
 # The text of the README file
 README = (HERE / "README.md").read_text()
-VERSION = '0.1.2'
+VERSION = '0.1.3'
 
 setuptools.setup(
     name="sympan",
@@ -16,7 +16,7 @@ setuptools.setup(
     long_description=README,
     long_description_content_type="text/markdown",
     url="http://www.github.com/~alem88/sympan/",
-    download_url="https://github.com/alem88/sympan/archive/refs/tags/0.1.1.tar.gz",
+    download_url="https://github.com/alem88/sympan/archive/refs/tags/0.1.2.tar.gz",
     packages=setuptools.find_packages(exclude=("tests",)),
 
     zip_safe=False,

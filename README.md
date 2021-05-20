@@ -41,4 +41,4 @@ if __name__ == '__main__':
 ```
 Here credentials.py is a file where you 
 need to put your AWS credentials. The structure in 
-destination folder will be the same as in S3 url. Try it! :) 
+destination folder will be the same as in S3 url. Try it!:) 
