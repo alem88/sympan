@@ -39,6 +39,6 @@ if __name__ == '__main__':
                         destination_folder="local/path/to/destination/folder",
                         n_jobs=2)
 ```
-Here credentials.py and config.py are two files where you 
-need to put appropriate information from the demo. The structure in 
+Here credentials.py is a file where you 
+need to put your AWS credentials. The structure in 
 destination folder will be the same as in S3 url. Try it! :) 
