@@ -5,7 +5,7 @@ HERE = pathlib.Path(__file__).parent
 
 # The text of the README file
 README = (HERE / "README.md").read_text()
-VERSION = '0.1.1'
+VERSION = '0.1.2'
 
 setuptools.setup(
     name="sympan",
@@ -15,7 +15,8 @@ setuptools.setup(
     description="Small Python library for downloading the data from AWS S3",
     long_description=README,
     long_description_content_type="text/markdown",
-    url="github.com/alem88/sympan/",
+    url="http://www.github.com/~alem88/sympan/",
+    download_url="https://github.com/alem88/sympan/archive/refs/tags/0.1.1.tar.gz",
     packages=setuptools.find_packages(exclude=("tests",)),
 
     zip_safe=False,
