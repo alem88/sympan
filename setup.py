@@ -1,13 +1,10 @@
-import pathlib
 import setuptools
+import pathlib
 # The directory containing this file
 HERE = pathlib.Path(__file__).parent
 
 # The text of the README file
 README = (HERE / "README.md").read_text()
-
-
-
 VERSION = '0.1.1'
 
 setuptools.setup(
@@ -15,17 +12,19 @@ setuptools.setup(
     version=VERSION,
     author="Alem Memic",
     author_email="memicalem@gmail.com",
-    description="Python library for downloading anything from AWS S3",
+    description="Small Python library for downloading the data from AWS S3",
     long_description=README,
     long_description_content_type="text/markdown",
-    license="MIT",
-    url="https://github.com/alem88/sympan",
-    packages=["sympan"],
+    url="github.com/alem88/sympan/",
+    packages=setuptools.find_packages(exclude=("tests",)),
+
+    zip_safe=False,
     include_package_data=True,
+    license="MIT",
     classifiers=[
-        "License :: OSI Approved :: MIT License",
         "Programming Language :: Python :: 3",
-        "Programming Language :: Python :: 3.7",
+        "License :: OSI Approved :: MIT License",
+        "Operating System :: OS Independent",
     ],
     install_requires=[
         "boto3==1.15.18",
