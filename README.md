@@ -11,7 +11,7 @@ Make sure you have Python 3.7 installed.
 ```bash install.sh``` will do the job.
 
 ```
-pip install sympan"
+pip install sympan
 
 ```
 
