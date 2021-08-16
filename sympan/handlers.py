@@ -104,13 +104,14 @@ class S3Handler:
             # build a folder with the same structure as source_key, but inside destination_folder
 
             # take all keys from bucket_name
-            response = self.s3_client.list_objects_v2(
-                Bucket=bucket_name,
-                Prefix=source_key,
-            )
 
-            objects = response['Contents']
-            all_keys = [ob['Key'] for ob in objects]
+            paginator = self.s3_client.get_paginator('list_objects_v2')
+            pages = paginator.paginate(Bucket=bucket_name, Prefix=source_key)
+            all_keys = []
+            for page in pages:
+                 for obj in page['Contents']:
+                    all_keys.append(obj['Key'])
+
 
             def worker(key: str):
                 # Exclude those keys that are folders or those files that don't contain source_key path

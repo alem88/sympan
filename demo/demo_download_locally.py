@@ -9,6 +9,6 @@ if __name__ == '__main__':
                    aws_secret_access_key=AWS_SECRET_ACCESS_KEY,
                    region_name=REGION_NAME)
 
-    s3.download_locally(s3_url= "s3://url/path/to/folder/or/file/",
-                        destination_folder="local/path/to/destination/folder",
+    s3.download_locally(s3_url= "/path/to/s3/folder/or/file",
+                        destination_folder="/path/to/the/local/folder/where/everything/will/be/downloaded/",
                         n_jobs=2)

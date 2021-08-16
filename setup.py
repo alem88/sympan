@@ -16,7 +16,7 @@ setuptools.setup(
     long_description=README,
     long_description_content_type="text/markdown",
     url="http://www.github.com/~alem88/sympan/",
-    download_url="https://github.com/alem88/sympan/archive/refs/tags/0.1.2.tar.gz",
+    download_url="https://github.com/alem88/sympan/archive/refs/tags/0.1.3.tar.gz",
     packages=setuptools.find_packages(exclude=("tests",)),
 
     zip_safe=False,

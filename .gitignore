@@ -5,3 +5,4 @@ dist/
 __pycache__/
 sympan.egg-info/
 config.py
+.idea
