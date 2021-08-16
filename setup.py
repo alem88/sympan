@@ -5,7 +5,7 @@ HERE = pathlib.Path(__file__).parent
 
 # The text of the README file
 README = (HERE / "README.md").read_text()
-VERSION = '0.1.3'
+VERSION = '0.1.4'
 
 setuptools.setup(
     name="sympan",
